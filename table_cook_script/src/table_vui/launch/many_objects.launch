@@ -1,0 +1,21 @@
+<launch>
+    <!-- Node 1 -->
+    <node pkg="table_vui" type="follow_object_on_table.py" name="optinode_odysseus" output="screen">
+        <param name="host" value="10.205.3.82" />
+        <param name="port" value="9876" />
+        <param name="body" value="odysseus" />
+    </node>
+
+    <!-- Node 2 -->
+    <node pkg="table_vui" type="follow_object_on_table.py" name="optinode_penelope" output="screen">
+        <param name="host" value="10.205.3.82" />
+        <param name="port" value="9877" />
+        <param name="body" value="penelope" />
+    </node>
+    <!-- Node 3 -->
+    <node pkg="table_vui" type="follow_object_on_table.py" name="optinode_telemachus" output="screen">
+        <param name="host" value="10.205.3.82" />
+        <param name="port" value="9878" />
+        <param name="body" value="telemachus" />
+    </node>
+</launch>

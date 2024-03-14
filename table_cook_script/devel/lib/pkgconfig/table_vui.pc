@@ -1,0 +1,8 @@
+prefix=/home/vera/capstone/table_cook_script/devel
+
+Name: table_vui
+Description: Description of table_vui
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

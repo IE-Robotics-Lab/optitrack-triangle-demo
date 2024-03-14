@@ -1,0 +1,2 @@
+table_vui
+-DCATKIN_DEVEL_PREFIX=/home/vera/capstone/table_cook_script/devel -DCMAKE_INSTALL_PREFIX=/home/vera/capstone/table_cook_script/install -G Unix Makefiles

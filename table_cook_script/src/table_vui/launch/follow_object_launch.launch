@@ -1,0 +1,7 @@
+<launch>
+    <node name="nodelistener_table_vui" pkg="table_vui" type="follow_object_on_table.py" output="screen">
+        <param name="host" value="10.205.3.82"  />
+        <param name="port" value="9876" />
+    </node>
+</launch>
+
