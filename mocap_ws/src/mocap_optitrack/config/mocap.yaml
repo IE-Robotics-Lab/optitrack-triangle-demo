@@ -1,0 +1,28 @@
+rigid_bodies:
+    '1':
+        pose: odysseus/pose
+        pose2d: odysseus/ground_pose
+        odom: odysseus/Odom
+        tf: tf
+        child_frame_id: odysseus/base_link
+        parent_frame_id: world
+    '2':
+       pose: penelope/pose
+       pose2d: penelope/ground_pose
+       odom: penelope/Odom
+       tf: tf
+       child_frame_id: penelope/base_link
+       parent_frame_id: world
+    '3':
+      pose: telemachus/pose
+      pose2d: telemachus/ground_pose
+      odom: telemachus/Odom
+      tf: tf
+      child_frame_id: telemachus/base_link
+      parent_frame_id: world
+
+optitrack_config:
+        multicast_address: 239.255.42.99
+        command_port: 1510
+        data_port: 1511
+        enable_optitrack: true

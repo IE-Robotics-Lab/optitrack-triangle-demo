@@ -1,0 +1,10 @@
+\subsubsection usage Usage
+\verbatim
+<node name="mocap_node" pkg="mocap_optitrack" type="mocap_node">
+  <param name="enable_optitrack" type="bool" value="False" />
+  <param name="command_port" type="int" value="0" />
+  <param name="data_port" type="int" value="0" />
+  <param name="multicast_address" type="str" value="239.255.42.99" />
+</node>
+\endverbatim
+

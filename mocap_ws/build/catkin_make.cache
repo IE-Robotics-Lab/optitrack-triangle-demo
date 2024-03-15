@@ -1,0 +1,2 @@
+connect_to_gaml:mocap_optitrack
+-DCATKIN_DEVEL_PREFIX=/home/vera/mocap_ws/devel -DCMAKE_INSTALL_PREFIX=/home/vera/mocap_ws/install -G Unix Makefiles

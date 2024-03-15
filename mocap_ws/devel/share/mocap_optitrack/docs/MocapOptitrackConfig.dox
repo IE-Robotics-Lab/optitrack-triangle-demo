@@ -1,0 +1,9 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~enable_optitrack" : \b [bool] Switch node on/off min: False, default: False, max: True
+- \b "~command_port" : \b [int] Command port min: 0, default: 0, max: 1510
+- \b "~data_port" : \b [int] Data port min: 0, default: 0, max: 1511
+- \b "~multicast_address" : \b [str] Multicast IP address min: , default: 239.255.42.99, max: 
+

@@ -1,0 +1,8 @@
+prefix=/home/vera/mocap_ws/devel
+
+Name: mocap_optitrack
+Description: Description of mocap_optitrack
+Version: 0.1.4
+Cflags: -I/home/vera/mocap_ws/devel/include -I/home/vera/mocap_ws/src/mocap_optitrack/include
+Libs: -L${prefix}/lib 
+Requires: roscpp dynamic_reconfigure

@@ -1,0 +1,7 @@
+<launch>
+    <node name="nodelistener" pkg="connect_to_gaml" type="t_send_data_to_gaml.py" output="screen">
+        <param name="host" value="10.205.3.36" />
+        <param name="port" value="9876" />
+    </node>
+</launch>
+
