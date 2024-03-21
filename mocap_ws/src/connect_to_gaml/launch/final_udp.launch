@@ -1,7 +1,0 @@
-<launch>
-    <node name="nodelistener" pkg="connect_to_gaml" type="udp_emitter_pos.py" output="screen">
-        <param name="host" value="10.205.3.82"  />
-        <param name="port" value="9876" />
-    </node>
-</launch>
-

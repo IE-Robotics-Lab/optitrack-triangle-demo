@@ -1,8 +1,0 @@
-prefix=/home/vera/mocap_ws/install
-
-Name: connect_to_gaml
-Description: Description of connect_to_gaml
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

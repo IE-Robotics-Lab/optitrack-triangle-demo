@@ -1,0 +1,8 @@
+prefix=/home/vera/optitrack-triangle-demo/rigid_body_triangle_demo/devel
+
+Name: mocap_optitrack
+Description: Description of mocap_optitrack
+Version: 0.1.4
+Cflags: -I/home/vera/optitrack-triangle-demo/rigid_body_triangle_demo/devel/include -I/home/vera/optitrack-triangle-demo/rigid_body_triangle_demo/src/mocap_optitrack/include
+Libs: -L${prefix}/lib 
+Requires: roscpp dynamic_reconfigure

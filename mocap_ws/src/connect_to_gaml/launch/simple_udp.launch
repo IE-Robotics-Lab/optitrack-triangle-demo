@@ -1,7 +1,0 @@
-<launch>
-    <node name="listener_simple" pkg="connect_to_gaml" type="simple_send_data_to_gaml.py" output="screen">
-        <param name="host" value="10.22.159.24" />
-        <param name="port" value="9876" />
-    </node>
-</launch>
-

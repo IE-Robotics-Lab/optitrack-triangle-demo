@@ -1,0 +1,8 @@
+prefix=/home/vera/optitrack-triangle-demo/rigid_body_triangle_demo/devel
+
+Name: optitrack_gaml_demo
+Description: Description of optitrack_gaml_demo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

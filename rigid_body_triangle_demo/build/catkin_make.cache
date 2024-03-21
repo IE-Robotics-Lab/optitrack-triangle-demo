@@ -1,0 +1,2 @@
+mocap_optitrack:optitrack_gaml_demo
+-DCATKIN_DEVEL_PREFIX=/home/vera/optitrack-triangle-demo/rigid_body_triangle_demo/devel -DCMAKE_INSTALL_PREFIX=/home/vera/optitrack-triangle-demo/rigid_body_triangle_demo/install -G Unix Makefiles

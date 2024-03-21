@@ -1,1 +1,0 @@
-# optimaker-ros-package-setup
