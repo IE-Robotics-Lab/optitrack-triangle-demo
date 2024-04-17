@@ -1,5 +1,5 @@
 <launch>
-  <arg name="gaml_ip" value="10.205.3.9" />
+  <arg name="gaml_ip" value="10.205.3.76" />
   <arg name="package_name" value="optitrack_gaml_demo"/>
 
 
