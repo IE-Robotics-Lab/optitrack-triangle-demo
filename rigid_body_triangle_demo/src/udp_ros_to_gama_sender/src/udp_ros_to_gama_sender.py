@@ -34,23 +34,17 @@ def calculate_x_and_y_into_2d_plane(x:float, y:float):
     # y = m_x * x + b_x
     # y = m_y * x + b_y
     
-    # this is perfect aligned on x, y
-    # m_x=0.893221434057349
-    # b_x=-84.33475357671148
-    # m_y=-0.9035819699090034
-    # b_y=-49.086752441398865
-
     # this is aligning vizual to center
-    m_x=0.9107279408356221
-    b_x=-87.41791563694846
-    m_y=-0.9105694388668829
-    b_y=-51.09337870893341
+    m_x=0.08804161031915723
+    b_x=-59.18366269822232
+    m_y=0.06967000717957743
+    b_y=29.27517730992163
+    
     [x_2d, y_2d] = np.dot([[m_x, 0], [0, m_y]], [x, y]) + [b_x, b_y]
-    return x_2d, y_2d
+    return x,y
 
 
 def quaternion_to_euler(data: PoseStamped):
-
     # quaternion to euler z == the heading
     x = data.pose.orientation.x 
     y = data.pose.orientation.z  # figure out the mapping between axis in system and in out system
@@ -73,7 +67,6 @@ def quaternion_to_euler(data: PoseStamped):
     return [X, Y, Z]
 
 def send_udp_message(host, port, message):
-    print(f"sending udp message: {message}")
     global sock
     if sock is None:
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -96,8 +89,8 @@ def update_position(new_position, data):
 
 def callback(data):
     time.sleep(0.001)
-    host = rospy.get_param('~host', '10.205.3.82')
-    port = rospy.get_param('~port', 9876)
+    host = rospy.get_param('~host')
+    port = rospy.get_param('~port')
 
     new_position = {
         'x': round(data.pose.position.x,4),
@@ -106,8 +99,6 @@ def callback(data):
     }
 
     if has_position_changed(new_position):
-        #import pdb;pdb.set_trace()
-        
         data = update_position(new_position, data)
         desired_output_t = desired_output().create(data, quaternion_to_euler(data))
         x,y = calculate_x_and_y_into_2d_plane(x=desired_output_t.x, y=desired_output_t.y)
@@ -115,14 +106,13 @@ def callback(data):
         send_udp_message(host, port, message)
 
 def listener():
-
-    rospy.init_node('nodelistener_table_vui', anonymous=True)
-    name = rospy.get_param('~body', default='odysseus')
-    rospy.Subscriber(f"/mocap_node/{name}/pose", PoseStamped, callback)
+    rospy.init_node('udp_ros_to_gama_sender', anonymous=True)
+    name = rospy.get_param('~body')
+    rospy.Subscriber(f"/optitrack/{name}/pose", PoseStamped, callback)
     rospy.spin()
         
-
 if __name__ == '__main__':
+    
     try:
         listener()
     finally:
